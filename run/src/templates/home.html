@@ -1,0 +1,23 @@
+{% extends "structure.html" %}
+
+{% block main_content %}
+
+<body><h1>Welcome to Bird Watch</h1></body>
+
+<form action = "/bird/home" method = "POST">
+    <input name="username" type="text" placeholder="USERNAME">
+    <!-- <input name="password" type="password" placeholder ="PASSWORD"> -->
+    <input type="submit" placeholder="Login">
+</form>
+
+<ul>
+    {% if tweets_list %}
+        {% for tweet in tweets_list %}
+            <li><p>{{ tweet }}</p></li>
+        {% endfor %}
+    {% endif %}
+</ul>
+
+{% endblock main_content %}
+
+

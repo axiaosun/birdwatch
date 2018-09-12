@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% block css_dependencies %}
+        {% endblock css_dependencies %}
+
+        {% block required_js %}
+        {% endblock required_js %}
+    </head>
+    <body>
+        <div>
+            {% block main_content %}
+                <p>This is default content</p>
+            {% endblock main_content %}
+        </div>
+
+        {% block js_dependencies %}
+        {% endblock js_dependencies %}
+    </body>
+</html>

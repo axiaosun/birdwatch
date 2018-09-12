@@ -1,0 +1,25 @@
+{% extends "structure.html" %}
+
+{% block main_content %}
+
+<body><h1>Welcome, {{ user }}</h1></body>
+
+<form action = "/bird/user" method = "POST">
+    <input name="tweet" type="text" placeholder="Water you thinking?">
+    <!-- <input name="password" type="password" placeholder ="PASSWORD"> -->
+    <input type="submit" placeholder="Tweet">
+</form>
+
+<ul>
+    {% if tweets_list %}
+        {% for tweet in tweets_list %}
+            <li><p>{{ tweet }}</p></li>
+        {% endfor %}
+    {% endif %}
+</ul>
+
+<p><a href="/bird/logout">Log Out</a></p>
+
+{% endblock main_content %}
+
+
